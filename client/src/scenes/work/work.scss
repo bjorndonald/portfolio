@@ -1,0 +1,102 @@
+@import './../../styles/utilities';
+//@import './../../styles/preloader';
+.page{
+    
+    // top: 2.5vw;
+    // left: 2.5vw;
+    // right: calc(2.5vw);
+}
+
+.other-page{
+    position: absolute;
+    left: 2.5vw;
+    top: 2.5vw;
+    //width: calc(95vw * 0.6);
+    height: calc(100vh - 5vw);
+    z-index: 1;
+    background: #F8F8F8;
+}
+
+#work{
+    position: absolute;
+    width: 95vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 5vw);
+    z-index: 2;
+
+    nav{
+        position: fixed;
+        top: 5vw;
+        left: 5vw;
+        //width: calc(100vw - 4rem);
+        display: flex;
+        z-index: 10;
+        width: 87.5vw;
+    }
+
+    &::-webkit-scrollbar { width: 0 !important }
+        overflow: -moz-scrollbars-none; 
+       -ms-overflow-style: none; 
+
+    .content{
+        position: relative;
+        padding-top: 20vh;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        height: 240vh;
+        display: flex;
+        
+
+        .left-section{
+            position: fixed;
+            width: 40vw;
+            margin-right: 0vw;
+            h1{
+                font-size: 3vw;
+                margin-bottom: 1vw;
+            }
+
+            p{
+                font-size: 1.3vw;
+                font-weight: bold;
+                margin-bottom: 1vw;
+            }
+
+            .details{
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.5vw;
+                ul{
+                    margin-right: 1.5vw;
+                    font-size: 1.3vw;
+                    li:first-child{
+                        font-weight: bold;
+                        margin-bottom: 0.5vw;
+                    }
+                }
+            }
+
+            .buttons{
+                margin-top: 2vw;
+
+                a{
+                    margin-right: 2vw;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .right-section{
+            position: fixed;
+            left: 45vw;
+
+            img{
+                position: absolute;
+                width: 60vw;
+                left: -3vw;
+                top: -2vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import './../../styles/utilities';
+
+.other-page{
+    position: absolute;
+    left: 2.5vw;
+    top: 2.5vw;
+    width: 0vw;
+    height: calc(100vh - 5vw);
+    z-index: -1;
+    background: #F8F8F8;
+}
+
+.page{
+    background: #FBEBD3;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    // animation-delay: 10s;
+    // animation: tohome 3s ease-in;
+    // animation-iteration-count: 1;
+    
+
+    .preloader-svg{
+        transition: .5s cubic-bezier(1, 0, 0, 1);
+        width: 70vw;
+        position: absolute;
+        top: calc(50% - 10vw);
+        left: calc(50% - 35vw);
+    }
+    
+    .st0{
+        stroke: #222;
+        fill: #222;
+        stroke-dasharray: 5750;
+        opacity: 10;
+        animation: animate 4s cubic-bezier(0,0.23,1,.1);
+    }
+}
+
+.preloader{
+    width: 100%;
+    height: 100%;
+}
+
+.preloader.after{
+    width: calc(100vw - 4rem);
+    height: calc(100vh - 4rem);
+}
+
+.logo-move{
+    svg{
+        width: 10vw;
+        top: 2rem;
+        left: 2rem;
+    }
+}
+
+
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 5750;
+    }
+
+    30%{
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 5750;
+    }
+
+    90%{
+        fill: rgba(22, 22, 22,0);
+    }
+
+    100%{
+        opacity: 10;
+        fill: rgba(22, 22, 22,1);
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes tohome {
+    100%{
+        
+    }
+}

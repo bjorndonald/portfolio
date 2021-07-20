@@ -1,0 +1,45 @@
+@import './../../styles/utilities';
+#contact{
+    padding-top: 7vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    height: 25vw;
+
+    p{
+        font-size: 1.3vw;
+        margin-bottom: 2vw;
+    }
+
+    .details{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 3vw;
+        
+        ul{
+            margin-right: 1vw;
+
+            li{
+                font-size: 1.3vw;
+                font-weight: bold;
+            }
+
+            li:first-child{
+                color: #707070;
+            }
+        }
+    }
+
+    .social{
+        display: flex;
+        li{
+            margin-right: 8vw;
+            a{
+                svg{
+                    width: 4vw;
+                    height: 4vw;
+                }
+            }
+        }
+    }
+}

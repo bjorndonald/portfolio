@@ -1,0 +1,153 @@
+@import 'config';
+
+.container {
+  max-width: $max-width;
+  margin: auto;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #222;
+  align-items: center;
+  font-family: 'quicksand';
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.other-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0vw;
+  height: 100vh;
+  z-index: 1;
+  background: #f8f8f8;
+}
+
+nav.main {
+  position: absolute;
+  top: 2.5vw;
+  left: 2.5vw;
+  //width: calc(100vw - 4rem);
+  display: flex;
+  z-index: 10;
+  width: 87.5vw;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    cursor: pointer;
+    .main-logo-svg {
+      width: 10vw;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      padding-left: 2vw;
+      a {
+        padding: 1vw 0;
+        cursor: pointer;
+        font-size: 2vw;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+nav.contact {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  //width: calc(100vw - 4rem);
+  display: flex;
+  z-index: 10;
+  width: 43vw;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    cursor: pointer;
+    .main-logo-svg {
+      width: 10vw;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    li {
+      //padding-left: 2vw;
+      a {
+        display: flex;
+        align-items: center;
+        svg {
+          width: 1.1vw;
+          margin-right: 0.5vw;
+        }
+        //padding: 1vw 0;
+        cursor: pointer;
+        font-size: 2vw;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+svg {
+  .mouse-scroll {
+    animation: mouseScroll 1s ease-out infinite forwards;
+  }
+}
+
+/// Buttons
+.btn {
+  padding: 0.5vw 2vw;
+  &-visit {
+    background: transparent;
+    border: 1px solid #222;
+  }
+}
+
+@keyframes mouseScroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
