@@ -172,14 +172,14 @@ export class Work extends Component {
   }
 
   componentDidMount () {
-    console.log(this.props.location)
+    // console.log(this.props.location)
     $('.other-page').css('width', 'calc(95vw * 0.6)')
     $('.page').css('width', '95vw')
     $('.page , .other-page').css('height', 'calc(100vh - 5vw)')
     $('.page , .other-page').css('left', '2.5vw')
     $('.page , .other-page').css('top', '2.5vw')
     $('.page').css('right', '2.5vw')
-    console.log(document.querySelector('#work .content'))
+    // console.log(document.querySelector('#work .content'))
     document
       .querySelector('#work')
       .addEventListener('scroll', this.handleScroll, false)
@@ -318,6 +318,8 @@ export class Work extends Component {
     }
   }
 
+  workClick = () => {}
+
   render () {
     //var work_data = JSON.parse(works);
     console.log(this.state.id)
@@ -334,6 +336,7 @@ export class Work extends Component {
           aboutClick={this.aboutClick}
           homeClick={this.homeClick}
           contactClick={this.contactClick}
+          workClick={this.workClick}
         />
 
         <div className='content'>
@@ -364,11 +367,7 @@ export class Work extends Component {
               </a>
             </div>
           </div>
-          <div className='right-section'>
-            <img
-              src={require(`./../../images/${works[this.state.id].image}.png`)}
-            />
-          </div>
+          <div className='right-section'>{works[this.state.id].image}</div>
         </div>
       </div>
     )
