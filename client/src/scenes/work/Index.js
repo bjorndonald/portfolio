@@ -11,7 +11,7 @@ import {
   AboutEnter
 } from './../../utlilities/EnterFunctions'
 import { workExit } from './../../utlilities/ExitFunctions'
-import works from './works'
+import { works } from './works'
 
 let scrollTop = $('#work').scrollTop()
 
